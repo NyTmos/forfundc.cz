@@ -13,7 +13,7 @@ body {
   color: #fff;
 }
 
-/* Sidebar */
+/* Boční bar */
 .sidebar {
   width: 240px;
   background: #1a1b22;
@@ -280,3 +280,4 @@ form button:hover {
   color: #aaa;
   text-align: right;
 }
+
