@@ -1,0 +1,282 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1e1f25, #2a2d3a, #1b1c22);
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #1a1b22;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border-right: 3px solid #6d28d9;
+  box-shadow: 3px 0 15px rgba(0,0,0,0.6);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  width: 36px;
+  filter: drop-shadow(0 0 6px #8b5cf6);
+}
+
+.logo h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #c4b5fd;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px 15px;
+  color: #cbd5e1;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: #8b5cf6;
+  color: #fff;
+  transform: translateX(5px);
+  box-shadow: 0 0 10px #8b5cf6;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  color: #a78bfa;
+  text-shadow: 0 0 8px #6d28d9;
+}
+
+.login-btn {
+  background: #5865f2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.25s;
+  box-shadow: 0 0 10px #5865f2;
+}
+
+.login-btn:hover {
+  background: #4f46e5;
+  box-shadow: 0 0 20px #818cf8;
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background: #23242d;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border: 2px solid #2e2f3a;
+}
+
+.user-card {
+  flex: 1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.user-info img {
+  width: 60px;
+  background: #facc15;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 0 15px #fcd34d;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.badge.admin {
+  background: #3b82f6;
+  color: white;
+}
+
+.badge.user {
+  background: #10b981;
+  color: white;
+}
+
+/* Progress bar */
+.progress {
+  height: 10px;
+  background: #2c2f3a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress .bar {
+  height: 100%;
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  box-shadow: 0 0 8px #8b5cf6;
+  transition: width 0.4s ease;
+}
+
+/* Notifications */
+.notif-card .notif {
+  background: #2c2f3a;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 12px;
+  box-shadow: inset 0 0 8px #6d28d9;
+}
+
+/* Announcements */
+.announce-card .announce {
+  background: #2c2f3a;
+  padding: 18px;
+  border-radius: 15px;
+  margin-top: 12px;
+  box-shadow: inset 0 0 8px #10b981;
+}
+
+/* Inputs & buttons */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form select, form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #2c2f3a;
+  color: #fff;
+}
+
+form button {
+  background: #8b5cf6;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+form button:hover {
+  background: #7c3aed;
+  box-shadow: 0 0 10px #8b5cf6;
+}
+
+#announcements .announcement {
+  background: #2c2f3a;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 6px #10b981;
+}
+
+
+/* Users list */
+#users-list {
+  margin-top: 15px;
+}
+
+.user-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c2f3a;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.user-row span {
+  font-weight: 600;
+}
+
+.user-row select {
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  background: #1f2937;
+  color: #fff;
+}
+
+.role-icon {
+  width: 18px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* XP Bar */
+#user-xp {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#xp-bar {
+  width: 100%;
+  height: 12px;
+  background: #2c2f3a;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+#xp-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7c3aed, #9333ea);
+  transition: width 0.5s ease;
+}
+
+#xp-text {
+  font-size: 14px;
+  color: #aaa;
+  text-align: right;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moje Herní Komunita</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="discord">
+      <h2>Moje Komunita</h2>
+    </div>
+    <nav>
+      <a href="#" class="active" id="nav-home">🏠 Domů</a>
+      <a href="#" id="nav-login">🔑 Přihlášení</a>
+      <a href="#" id="nav-users" class="admin-only" style="display:none;">👥 Uživatelé</a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>🎮 Herní Lobby</h1>
+      <button class="login-btn" id="logout-btn" style="display:none;">🚪 Odhlásit se</button>
+    </header>
+
+    <!-- Home -->
+    <section id="home-section">
+      <div class="card user-card" id="user-card" style="display:none;">
+        <div class="user-info">
+          <img src="https://cdn-icons-png.flaticon.com/512/3069/3069186.png" alt="user">
+          <div>
+            <h2 id="username-display">User</h2>
+            <span class="badge user" id="role-display">Member</span>
+          </div>
+        <div id="user-xp">
+  <div id="xp-bar">
+    <div id="xp-progress"></div>
+  </div>
+  <p id="xp-text"></p>
+</div>
+        </div>
+      </div>
+
+      <div class="card notif-card">
+        <h3>🔔 Oznámení</h3>
+        <div id="announcements"></div>
+      </div>
+
+      <div class="card announce-card admin-only" style="display:none;">
+        <h3>📢 Přidat oznámení</h3>
+        <form id="announce-form">
+          <input type="text" id="announce-title" placeholder="Titulek" required>
+          <textarea id="announce-text" placeholder="Text oznámení" required></textarea>
+          <button type="submit">➕ Přidat</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Login / Register -->
+    <section id="login-section" style="display:none;">
+      <div class="card">
+        <h3>🔑 Přihlášení</h3>
+        <form id="login-form">
+          <input type="text" id="login-username" placeholder="Uživatelské jméno" required>
+          <input type="password" id="login-password" placeholder="Heslo" required>
+          <button type="submit">Přihlásit se</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>📝 Registrace</h3>
+        <form id="register-form">
+          <input type="text" id="reg-username" placeholder="Uživatelské jméno" required>
+          <input type="password" id="reg-password" placeholder="Heslo" required>
+          <button type="submit">Registrovat</button>
+        </form>
+      </div>
+    </section>
+
+<section id="users-section" style="display:none;">
+  <div class="card, admin-only">
+    <h3>👥 Správa uživatelů</h3>
+    <div id="users-list"></div>
+  </div>
+</section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
